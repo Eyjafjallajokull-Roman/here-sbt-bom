@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2025 HERE Europe B.V.
+ * Copyright (C) 2019-2026 HERE Europe B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,15 +16,11 @@
  * SPDX-License-Identifier: Apache-2.0
  * License-Filename: LICENSE
  */
-package com.here.bom
+import sbt._
+import com.here.bom.Bom
 
-import com.here.platform.pipeline.PipelineConfig
-import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
-
-object Demo extends App {
-  println("Hello")
-  println(classOf[StreamExecutionEnvironment])
-  println(classOf[PipelineConfig])
-  println("The classes resolve fine")
-
+case class Dependencies(platformBom: Bom) {
+  val dependencies: Seq[ModuleID] = Seq(
+    "com.fasterxml.jackson.core" % "jackson-databind" % platformBom
+  )
 }

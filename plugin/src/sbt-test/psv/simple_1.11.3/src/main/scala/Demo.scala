@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2025 HERE Europe B.V.
+ * Copyright (C) 2019-2026 HERE Europe B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
  * SPDX-License-Identifier: Apache-2.0
  * License-Filename: LICENSE
  */
-import sbt._
-import com.here.bom.Bom
+package com.here.bom
 
-case class Dependencies(platformBom: Bom) {
-  val dependencies: Seq[ModuleID] = Seq(
-    "com.fasterxml.jackson.core" % "jackson-databind" % platformBom
-  )
+import com.fasterxml.jackson.databind.ObjectMapper
+
+object Demo extends App {
+  val mapper = new ObjectMapper()
+  println("ObjectMapper instance: " + mapper)
 }

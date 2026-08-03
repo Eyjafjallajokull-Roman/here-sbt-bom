@@ -4,7 +4,7 @@ import scala.xml.{Node => XmlNode, NodeSeq => XmlNodeSeq, _}
 import scala.xml.transform._
 
 val organizationSettings: Seq[Setting[_]] = Seq(
-  scalaVersion := "2.12.15",
+  scalaVersion := "2.12.20",
   organization := "com.here.platform",
   projectInfo := ModuleInfo(
     nameFormal = "HERE sbt-bom plugin",
@@ -86,7 +86,7 @@ lazy val `sbt-bom` = project
         Seq("-Dplugin.version=" + version.value)
     },
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.2.15" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.20" % Test,
       "org.scalamock" %% "scalamock" % "5.2.0" % Test
     )
   )

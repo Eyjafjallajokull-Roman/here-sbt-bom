@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2025 HERE Europe B.V.
+ * Copyright (C) 2019-2026 HERE Europe B.V.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,20 +16,15 @@
  * SPDX-License-Identifier: Apache-2.0
  * License-Filename: LICENSE
  */
-import sbt._
-import com.here.bom.Bom
+package com.here.bom
 
-object Dependencies {
-  lazy val additionalResolvers = Seq(
-    "HERE_PLATFORM_REPO" at "https://repo.platform.here.com/artifactory/open-location-platform"
-  )
-}
+import com.here.platform.pipeline.PipelineConfig
+import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
-case class Dependencies(platformBom: Bom) {
-  val dependencies: Seq[ModuleID] = Seq(
-    "org.apache.flink" %% "flink-scala" % platformBom,
-    "org.apache.flink" %% "flink-streaming-scala" % platformBom,
-    "com.here.platform.data.client" %% "flink-support" % platformBom,
-    "com.here.platform.pipeline" %% "pipeline-interface" % platformBom,
-  )
+object Demo extends App {
+  println("Hello")
+  println(classOf[StreamExecutionEnvironment])
+  println(classOf[PipelineConfig])
+  println("The classes resolve fine")
+
 }

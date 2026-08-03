@@ -14,7 +14,7 @@ While there is no official support by HERE, you may still raise issues via GitHu
 
 ## Prerequisites
 This plugin is compatible with:
-- sbt 1.3.0 or newer
+- sbt 1.9.0 or newer
 
 ## How to use it
 The following text provides a step-by-step guide on how to import [Jackson BOM](https://github.com/FasterXML/jackson-bom) into an sbt project.
@@ -191,6 +191,6 @@ This sequence of commands will print all the logs generated during packaging to 
 - Gaël Jourdan-Weil (https://github.com/gaeljw)
 
 ## License
-Copyright (C) 2019-2025 HERE Europe B.V.
+Copyright (C) 2019-2026 HERE Europe B.V.
 
 Unless otherwise noted in `LICENSE` files for specific files or directories, the [LICENSE](LICENSE) in the root applies to all content in this repository.
